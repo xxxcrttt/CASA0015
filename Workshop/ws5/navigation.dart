@@ -7,6 +7,11 @@ void main() {
   ));
 }
 
+
+// both pages are stateless, the app context manages the routes
+// Context: loosely meaning the app environment  
+
+
 class FirstRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,6 +23,8 @@ class FirstRoute extends StatelessWidget {
         child: ElevatedButton(
           child: Text('Open Route'),
           onPressed: () {
+            // context ==> Anonymous function
+            // MaterialPageRoute(class): nice transition between the routes  
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return SecondRoute();
             }));
